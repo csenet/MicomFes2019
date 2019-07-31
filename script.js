@@ -23,7 +23,7 @@ media.catch(function(error) {
   return;
 });
 peer = new Peer({
-  ket: '4852b666-0601-4aaf-b74c-1e099ce0860a',
+  key: '4852b666-0601-4aaf-b74c-1e099ce0860a',
   debug: 3
 });
 peer.on('open', function() {
