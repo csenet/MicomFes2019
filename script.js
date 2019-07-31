@@ -41,6 +41,7 @@ function addVideo(call,stream){
 function removeVideo(peerId){
   $('#thir-video').get(0).srcObject = undefined;
 }
+
 function setupCallEventHandlers(call){
     if (existingCall) {
         existingCall.close();
