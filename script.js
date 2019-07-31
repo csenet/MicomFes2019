@@ -7,7 +7,6 @@ let media = navigator.mediaDevices.getUserMedia({
   audio: true
 }).then(function(stream) {
   // Success
-  my-video.srcObject = stream;
   $('#my-video').get(0).srcObject = stream;
   localStream = stream;
 }).catch(function(error) {
