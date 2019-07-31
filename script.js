@@ -41,7 +41,15 @@ function addVideo(call,stream){
 function removeVideo(peerId){
   $('#their-video').get(0).srcObject = undefined;
 }
+function setupMakeCallUI(){
+    $('#make-call').show();
+    $('#end-call').hide();
+}
 
+function setupEndCallUI() {
+    $('#make-call').hide();
+    $('#end-call').show();
+}
 function setupCallEventHandlers(call){
     if (existingCall) {
         existingCall.close();
