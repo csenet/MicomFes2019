@@ -36,10 +36,10 @@ peer.on('close', function() {});
 peer.on('disconnected', function() {});
 
 function addVideo(call,stream){
-  $('#thir-video').get(0).srcObject = stream;
+  $('#their-video').get(0).srcObject = stream;
 }
 function removeVideo(peerId){
-  $('#thir-video').get(0).srcObject = undefined;
+  $('#their-video').get(0).srcObject = undefined;
 }
 
 function setupCallEventHandlers(call){
