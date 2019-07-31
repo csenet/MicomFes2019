@@ -2,27 +2,28 @@ let localStream = null;
 let peer = null;
 let existingCall = null;
 
-navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-    .then(function (stream) {
-        // Success
-        $('#my-video').get(0).srcObject = stream;
-        localStream = stream;
-    }).catch(function (error) {
-        // Error
-        console.error('mediaDevice.getUserMedia() error:', error);
-        return;
-    });
+let media = navigator.mediaDevices.getUserMedia({
+  video: true,
+  audio: true
+}).then(function(stream) {
+  // Success
+  my-video.srcObject = stream;
+  $('#my-video').get(0).srcObject = stream;
+  localStream = stream;
+}).catch(function(error) {
+  // Error
+  console.error('mediaDevice.getUserMedia() error:', error);
+  return;
+});
 peer = new Peer({
   ket: '',
-  debug : 3
+  debug: 3
 });
-peer.on('open',function(){
+peer.on('open', function() {
   $('#my-id').text(peer.id);
 });
-peer.on('error',function(err){
+peer.on('error', function(err) {
   console.log(err.message);
 });
-peer.on('close',function(){
-});
-peer.on('disconnected',function(){
-});
+peer.on('close', function() {});
+peer.on('disconnected', function() {});
