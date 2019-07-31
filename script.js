@@ -3,11 +3,13 @@ let peer = null;
 let existingCall = null;
 
 let media = navigator.mediaDevices.getUserMedia({
+  /*
   video: {
     facingMode : {
       exact: "environment" //スマホのリアカメラにアクセス
     }
-  },
+  },*/
+  video: true,
   audio: true
 });
 media.then(function(stream) {
@@ -21,7 +23,7 @@ media.catch(function(error) {
   return;
 });
 peer = new Peer({
-  ket: '',
+  ket: '4852b666-0601-4aaf-b74c-1e099ce0860a',
   debug: 3
 });
 peer.on('open', function() {
