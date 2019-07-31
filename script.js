@@ -32,3 +32,38 @@ peer.on('error', function(err) {
 });
 peer.on('close', function() {});
 peer.on('disconnected', function() {});
+
+function addVideo(call,stream){
+  $('#thir-video').get(0).srcObject = stream;
+}
+function removeVideo(peerId){
+  $('#thir-video').get(0).srcObject = undefined;
+}
+function setupCallEventHandlers(call){
+    if (existingCall) {
+        existingCall.close();
+    };
+    existingCall = call;
+    call.on('stream', function(stream){
+      addVideo(call,stream);
+      setupEndCallUI();
+      $('#thir-id').text(call.remoteId);
+    });
+    call.on('close', function(){
+        removeVideo(call.remoteId);
+        setupMakeCallUI();
+    });
+}
+
+$('#make-call').submit(function(e){
+  e.preventDefault();
+  const call = peer.call($('#callto-id').val(), localStream);
+  setupCallEventHandlers(call);
+});
+$('#end-call').click(function(){
+  existingCall.close();
+})
+peer.on('call', function(call){
+  call.answer(localStream);
+  setupCallEventHandlers(call);
+});
