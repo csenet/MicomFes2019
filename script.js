@@ -32,7 +32,6 @@ peer.on('open', function() {
 peer.on('error', function(err) {
   console.log(err.message);
 });
-peer.on('close', function() {});
 peer.on('disconnected', function() {});
 
 function addVideo(call,stream){
@@ -50,6 +49,7 @@ function setupEndCallUI() {
     $('#make-call').hide();
     $('#end-call').show();
 }
+
 function setupCallEventHandlers(call){
     if (existingCall) {
         existingCall.close();
@@ -77,4 +77,7 @@ $('#end-call').click(function(){
 peer.on('call', function(call){
   call.answer(localStream);
   setupCallEventHandlers(call);
+});
+peer.on('close', function() {
+  existingCall.close();
 });
