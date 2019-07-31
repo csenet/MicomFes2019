@@ -3,13 +3,19 @@ let peer = null;
 let existingCall = null;
 
 let media = navigator.mediaDevices.getUserMedia({
-  video: true,
+  video: {
+    facingMode : {
+      exact: "environment" //スマホのリアカメラにアクセス
+    }
+  },
   audio: true
-}).then(function(stream) {
+});
+media.then(function(stream) {
   // Success
   $('#my-video').get(0).srcObject = stream;
   localStream = stream;
-}).catch(function(error) {
+});
+media.catch(function(error) {
   // Error
   console.error('mediaDevice.getUserMedia() error:', error);
   return;
