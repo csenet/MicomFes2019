@@ -7,9 +7,8 @@ screenshare.start({
   width: 300,
   height: 600,
   frameRate: 50,
-  mediaSource: <string>, // Firefox only
-})
-  .then(function(stream) {
+  mediaSource: none, // Firefox only
+}).then(function(stream) {
     $('#my-video').get(0).srcObject = stream;
     localStream = stream;
   })
@@ -17,7 +16,7 @@ screenshare.start({
      // error callback
      console.error('mediaDevice.getUserMedia() error:', error);
      return;
-  });
+});
 
 
 /*
