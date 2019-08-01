@@ -1,14 +1,33 @@
 let localStream = null;
 let peer = null;
 let existingCall = null;
+let screenshare = screenshare.create({debug :true});
 
+screenshare.start({
+  width: 300,
+  height: 600,
+  frameRate: 50,
+  mediaSource: <string>, // Firefox only
+})
+  .then(function(stream) {
+    $('#my-video').get(0).srcObject = stream;
+    localStream = stream;
+  })
+  .catch(function(error) {
+     // error callback
+     console.error('mediaDevice.getUserMedia() error:', error);
+     return;
+  });
+
+
+/*
 let media = navigator.mediaDevices.getUserMedia({
   /*
   video: {
     facingMode : {
       exact: "environment" //スマホのリアカメラにアクセス
     }
-  },*/
+  },
   video: true,
   audio: true
 });
@@ -22,6 +41,8 @@ media.catch(function(error) {
   console.error('mediaDevice.getUserMedia() error:', error);
   return;
 });
+*/
+
 peer = new Peer({
   key: '4852b666-0601-4aaf-b74c-1e099ce0860a',
   debug: 3
