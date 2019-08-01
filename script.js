@@ -1,30 +1,13 @@
 let localStream = null;
 let peer = null;
 let existingCall = null;
-let screenshare = screenshare.create({debug :true});
-
-screenshare.start({
-  width: 300,
-  height: 600,
-  frameRate: 50,
-  mediaSource: none, // Firefox only
-}).then(function(stream) {
-    $('#my-video').get(0).srcObject = stream;
-    localStream = stream;
-  })
-  .catch(function(error) {
-     // error callback
-     console.error('mediaDevice.getUserMedia() error:', error);
-     return;
-});
-
 
 /*
 let media = navigator.mediaDevices.getUserMedia({
-  /*
   video: {
-    facingMode : {
-      exact: "environment" //スマホのリアカメラにアクセス
+    mandatory: {
+      choromeMediaSource: 'desktop',
+      choromeMediaSourceId: ''
     }
   },
   video: true,
@@ -41,6 +24,7 @@ media.catch(function(error) {
   return;
 });
 */
+let screen = navigator.getDisplayMedia({video:true}).then(stream => $('#my-video').get(0).srcObject = stream);
 
 peer = new Peer({
   key: '4852b666-0601-4aaf-b74c-1e099ce0860a',
