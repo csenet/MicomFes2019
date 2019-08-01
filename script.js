@@ -24,7 +24,7 @@ media.catch(function(error) {
   return;
 });
 */
-let screen = navigator.getDisplayMedia({video:true}).then(stream => $('#my-video').get(0).srcObject = stream);
+let screen = navigator.mediaDevice.getDisplayMedia({video:true}).then(stream => $('#my-video').get(0).srcObject = stream);
 
 peer = new Peer({
   key: '4852b666-0601-4aaf-b74c-1e099ce0860a',
