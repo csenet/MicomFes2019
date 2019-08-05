@@ -2,6 +2,7 @@ let localStream = null;
 let peer = null;
 let existingCall = null;
 var screenshare = ScreenShare.create({ debug: true });
+
 screenshare.start({
 })
 .then(function(stream){
@@ -12,6 +13,8 @@ screenshare.start({
   console.error('mediaDevice.getUserMedia() error:', error);
   return;
 });
+var result = screenshare.isScreenShareAvailable();
+alert(result);
 /*
 let media = navigator.mediaDevices.getUserMedia({
   video: {
