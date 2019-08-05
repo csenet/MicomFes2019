@@ -1,0 +1,29 @@
+{
+  "name": "MiconFes2019 ScreenCapture",
+  "short_name": "MiconSC",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "ScreenCapture for MiconFes2019",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "desktopCapture",
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": [
+    "*://*/*",
+    "file://*/*"
+  ], // change origin name as your own.
+    "js": ["content.js"],
+    "all_frames": true,
+    "run_at": "document_end"
+  }]
+}
