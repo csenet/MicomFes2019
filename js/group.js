@@ -42,13 +42,6 @@ $(function() {
       })
       .then(stream => {
         $('#myStream')[0].srcObject = stream;
-
-        if (existingCall !== null) {
-          const peerid = existingCall.peer;
-          existingCall.close();
-          const call = peer.call(peerid, stream);
-          step3(call);
-        }
         localStream = stream;
       })
       .catch(error => {
