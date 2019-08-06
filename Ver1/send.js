@@ -81,8 +81,10 @@ $(function() {
     setupCallEventHandlers(room);
     $('#status').text("配信中");
   });
+
   $('#end').click(()=>{
     existingCall.close();
+    $('#status').text("未配信");
   });
 
   peer.on('open', function() {
