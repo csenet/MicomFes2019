@@ -60,7 +60,6 @@ $(function() {
       return;
     });
   }
-
   $('#changeCamera').click(function(){
     camerastream();
   });
@@ -77,7 +76,7 @@ $(function() {
   peer.on('open', function() {
     $('#my-id').text(peer.id);
   });
-  
+
   peer.on('error', function(err) {
     console.log(err.message);
   });
