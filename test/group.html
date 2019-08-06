@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="/style/group.css">
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="https://cdn.webrtc.ecl.ntt.com/screenshare-latest.js"></script>
     <script type="text/javascript" src="/js/group.js"></script>
 </head>
 <body>
 <div class="videosContainer">
-    <video id="myStream" autoplay muted="true"></video>
+    <video id="myStream" autoplay muted="true" playsinline></video>
 </div>
 
 <div class="myControllerContainer">
@@ -19,6 +20,8 @@
         <input type="text" placeholder="Join room..." id="join-room">
         <button type="submit">Join</button>
     </form>
+    <button id="switch-camera">Camera</button>
+    <button id="switch-screen">Screen</button>
     <div id="end-call">
         <p>Currently in room <span id="room-id">...</span></p>
         <button>Leave</button>
