@@ -79,6 +79,10 @@ $(function() {
       stream: localStream,
     });
     setupCallEventHandlers(room);
+    $('#status').text("配信中");
+  });
+  $('#end').click(()=>{
+    existingCall.close();
   });
 
   peer.on('open', function() {
