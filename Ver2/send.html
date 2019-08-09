@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ja">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyWay Handson</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  <script src="https://cdn.webrtc.ecl.ntt.com/screenshare-latest.js"></script>
+  <script type="text/javascript" src="send.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <video id="myStream" autoplay muted="true" playsinline style="display:inline;"></video>
+    <p>Your id: <span id="my-id">...</span></p>
+    <button id="switch-camera" class="btn btn-success">Camera</button>
+    <button id="switch-screen" class="btn btn-success">Screen</button>
+    <button id="send" class="btn btn-success">配信開始</button>
+    <button id="end" class="btn btn-warning">配信終了</button>
+    <span id="status">未配信</span>
+  </div>
+</body>
+
+</html>
