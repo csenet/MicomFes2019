@@ -14,14 +14,12 @@
   <title>受付票プリント</title>
   <script>
     //自動プリント
-    /*
     $(window).on('load', function() {
       setTimeout(function() {
         window.print();
         window.close();
       }, 200);
     })
-    */
     //バーコード表示
     $(function(){
        $("#barcode").barcode("<?php echo $_GET["code"]?>", "ean13", {barWidth:2,barHeight:30});
