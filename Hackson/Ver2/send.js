@@ -42,7 +42,7 @@ $(function() {
         frameRate: $('#FrameRate').val(),
       })
       .then(stream => {
-        $('#myStream')[0].srcObject = stream;
+        $('#myStream').get(0).srcObject = stream;
         localStream = stream;
       })
       .catch(error => {
