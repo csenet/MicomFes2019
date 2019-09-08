@@ -5,36 +5,49 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hackson Live Streaming</title>
-  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-  <link rel="stylesheet" href="Ver2/css/bootstrap.min.css">
-  <script type="text/javascript" src="Ver2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    <script src="/js/main.js"></script>
 </head>
 
 <body>
-  <div class="text-center">
-    <img src="/images/Bannerデスマ.png" style="height:30vh;">
-    <p>Live Streaming and Voting System</p>
-  </div>
-  サポートブラウザ<br>
-  画面共有:PC版Chorome最新版, Firefox最新版<br>
-  WebRTC:PC版Chorome最新版, Firefox最新版, iPohne Safari, Android chorome<br>
-  <br>
-  Choromeの場合は,画面共有するために以下の拡張機能を追加してください<br>
-  <a href="https://chrome.google.com/webstore/detail/miconfes2019-screencaptur/bfoejlmfapbojfpkjdddmalahobjjjnb?hl=ja">拡張機能</a><br>
-  ※マイコン制御部のアカウントでログインしてください
-  <ul>
-    （開発テスト用）
-    <li><a href="test/test.html">1:1通話&入力切り替えテスト</a></li>
-    <li><a href="test/group.html">グループ通話テスト</a></li>
-  </ul>
-  <ul>
-    (Version.1)
-    <li><a href="Ver1/send.html">送信側</a></li>
-    <li><a href="Ver1/view.html">受信側</a></li>
-    (Version.2)レイアウト+認証機能
-    <li><a href="Ver2/send.html">送信側</a></li>
-    <li><a href="Ver2/view.html">受信側</a></li>
-  </ul>
+<div id="header">/<!--header--></div>
+<div class="container">
+    <div class="text-center">
+        <img src="/images/Bannerデスマ.png" style="height:30vh;">
+        <p>Live Streaming and Voting System</p>
+    </div>
+    サポートブラウザ<br>
+    画面共有:PC版Chorome最新版, Firefox最新版<br>
+    WebRTC:PC版Chorome最新版, Firefox最新版, iPohne Safari, Android chorome<br>
+    <br>
+    Choromeの場合は,画面共有するために以下の拡張機能を追加してください<br>
+    <a href="https://chrome.google.com/webstore/detail/miconfes2019-screencaptur/bfoejlmfapbojfpkjdddmalahobjjjnb?hl=ja">拡張機能</a><br>
+    ※マイコン制御部のアカウントでログインしてください
+    <ul>
+        （開発テスト用）
+        <li><a href="test/test.html">1:1通話&入力切り替えテスト</a></li>
+        <li><a href="test/group.html">グループ通話テスト</a></li>
+    </ul>
+    <ul>
+        (Version.1)
+        <li><a href="Ver1/send.html">送信側</a></li>
+        <li><a href="Ver1/view.html">受信側</a></li>
+        (Version.2)レイアウト+認証機能
+        <li><a href="Ver2/send.html">送信側</a></li>
+        <li><a href="Ver2/view.html">受信側</a></li>
+    </ul>
+</div>
 </body>
 
 </html>
