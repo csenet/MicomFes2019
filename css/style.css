@@ -21,10 +21,11 @@ body > .container {
 }
 
 .slider-items {
-    max-width: 600px;
+    max-height: 600px;
     margin: 0 auto 50px;
     padding: 0;
-    height: auto;
+    width: auto;
+    background: yellow;
 }
 
 .slider-items img {
