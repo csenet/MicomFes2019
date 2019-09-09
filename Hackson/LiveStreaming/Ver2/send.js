@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 $(function() {
   let localStream = null;
   let peer = null;
@@ -23,7 +23,7 @@ $(function() {
         localStream = stream;
       }).catch(function(error) {
         console.error('mediaDevice.getUserMedia() error:', error);
-        return;
+
       });
   }
 
@@ -61,8 +61,8 @@ $(function() {
   function setupCallEventHandlers(call) {
     if (existingCall) {
       existingCall.close();
-    };
-    existingCall = call;
+    }
+      existingCall = call;
     call.on('stream', function(stream) {});
     call.on('peerLeave', function(peerId) {});
     call.on('close', function() {});

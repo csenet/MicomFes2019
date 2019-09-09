@@ -22,7 +22,7 @@ $(function() {
         localStream = stream;
       }).catch(function(error) {
         console.error('mediaDevice.getUserMedia() error:', error);
-        return;
+
       });
   }
 
@@ -90,9 +90,8 @@ $(function() {
   function setupCallEventHandlers(call) {
     if (existingCall) {
       existingCall.close();
-    };
-
-    existingCall = call;
+    }
+      existingCall = call;
     setupEndCallUI();
     $('#room-id').text(call.name);
 

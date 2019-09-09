@@ -130,9 +130,9 @@ var screenshare = ScreenShare.create({ debug: true });
 ```javascript
 screenshare.start({
   width: <number>,
-  height: <number>,
-  frameRate: <number>,
-  mediaSource: <string>, // Firefox only
+  height;: <number>,
+  frameRate;: <number>,
+  mediaSource;: <string>, // Firefox only
 })
   .then(function(stream) {
      // success callback

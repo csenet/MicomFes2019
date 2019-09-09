@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 $(function() {
   let localStream = null;
   let peer = null;
@@ -15,7 +15,7 @@ $(function() {
     min: 240,
     max: 240
   };
-
+  $('.videosContainer').empty();
   function addVideo(stream) {
     const videoDom = $('<video autoplay muted="true" playsinline>');
     videoDom.attr('id', stream.peerId);
@@ -34,8 +34,8 @@ $(function() {
   function setupCallEventHandlers(call) {
     if (existingCall) {
       existingCall.close();
-    };
-    existingCall = call;
+    }
+      existingCall = call;
 
     call.on('stream', stream => {
       addVideo(stream);

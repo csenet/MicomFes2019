@@ -3,11 +3,11 @@
 <head lang="ja">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>SkyWay Handson</title>
-    <link rel="stylesheet" href="/style/group.css">
+    <link rel="stylesheet" href="../css/group.css">
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
     <script src="https://cdn.webrtc.ecl.ntt.com/screenshare-latest.js"></script>
-    <script type="text/javascript" src="view.js"></script>
+    <script type="text/javascript" src="send.js"></script>
 </head>
 <body>
 <div class="videosContainer">
@@ -15,7 +15,14 @@
 </div>
 <div class="myControllerContainer">
     <p>Your id: <span id="my-id">...</span></p>
-    <!--<button id="show">表示</button>-->
+    <button id="switch-camera">Camera</button>
+    <button id="switch-screen">Screen</button>
+    <br><br>
+    <button id="send">配信開始</button>
+    <button id="end">配信終了</button>
+    <br><br>
+    <span id="status">未配信</span>
 </div>
+
 </body>
 </html>

@@ -1250,8 +1250,8 @@
       lines = digit.length,
       columns = digit[0].length,
       content = "",
-      bar0 = "<div style=\"float: left; font-size: 0; background-color: " + settings.bgColor + "; height: " + mh + "px; width: &Wpx\"></div>",
-      bar1 = "<div style=\"float: left; font-size: 0; width:0; border-left: &Wpx solid " + settings.color + "; height: " + mh + "px;\"></div>";
+        bar0 = "<div css=\"float: left; font-size: 0; background-color: " + settings.bgColor + "; height: " + mh + "px; width: &Wpx\"></div>",
+        bar1 = "<div css=\"float: left; font-size: 0; width:0; border-left: &Wpx solid " + settings.color + "; height: " + mh + "px;\"></div>";
     for (y = 0; y < lines; y++) {
       len = 0;
       current = digit[y][0];
@@ -1269,7 +1269,7 @@
       }
     }
     if (settings.showHRI) {
-      content += "<div style=\"clear:both; width: 100%; background-color: " + settings.bgColor + "; color: " + settings.color + "; text-align: center; font-size: " + settings.fontSize + "px; margin-top: " + settings.marginHRI + "px;\">" + hri + "</div>";
+        content += "<div css=\"clear:both; width: 100%; background-color: " + settings.bgColor + "; color: " + settings.color + "; text-align: center; font-size: " + settings.fontSize + "px; margin-top: " + settings.marginHRI + "px;\">" + hri + "</div>";
     }
     antialiasing($container);
     resize($container, mw * columns).html(content);
@@ -1317,7 +1317,7 @@
 
     if (settings.showHRI) {
       svg += '<g transform="translate(' + Math.floor(width / 2) + ' 0)">';
-      svg += '<text y="' + (height - Math.floor(fontSize / 2)) + '" text-anchor="middle" style="font-family: Arial; font-size: ' + fontSize + 'px;" fill="' + settings.color + '">' + hri + '</text>';
+        svg += '<text y="' + (height - Math.floor(fontSize / 2)) + '" text-anchor="middle" css="font-family: Arial; font-size: ' + fontSize + 'px;" fill="' + settings.color + '">' + hri + '</text>';
       svg += '</g>';
     }
     // svg footer

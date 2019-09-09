@@ -57,7 +57,7 @@ $(function() {
     .catch(error => {
       // Error
       console.error('mediaDevice.getUserMedia() error:', error);
-      return;
+
     });
   }
   $('#changeCamera').click(function(){
@@ -103,8 +103,8 @@ $(function() {
   function setupCallEventHandlers(call) {
     if (existingCall) {
       existingCall.close();
-    };
-    existingCall = call;
+    }
+      existingCall = call;
     call.on('stream', function(stream) {
       addVideo(call, stream);
       setupEndCallUI();
@@ -123,7 +123,7 @@ $(function() {
   });
   $('#end-call').click(function() {
     existingCall.close();
-  })
+  });
   peer.on('call', function(call) {
     call.answer(localStream);
     setupCallEventHandlers(call);
