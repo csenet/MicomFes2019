@@ -5,8 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  crossorigin="anonymous"></script>
 
   <script src="./js/jquery-barcode.min.js"></script>
   <script src="./js/jquery-barcode.js"></script>
@@ -14,15 +18,17 @@
   <title>受付票プリント</title>
   <script>
     //自動プリント
+    /*
     $(window).on('load', function() {
       setTimeout(function() {
         window.print();
         window.close();
       }, 200);
     })
+    */
     //バーコード表示
     $(function(){
-       $("#barcode").barcode("<?php echo $_GET["code"]?>", "ean13", {barWidth:2,barHeight:30});
+       $("#barcode").barcode("1000000000000", "ean13", {barWidth:2,barHeight:30});
     });
   </script>
 </head>

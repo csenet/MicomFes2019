@@ -2,12 +2,9 @@
 <html lang="ja">
 
 <head>
+    <title>弟燕祭2019-マイコン制御部</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -16,35 +13,71 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
             integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <script src="/js/main.js"></script>
     <script src="/js/slide.js"></script>
 
-    <title>弟燕祭2019-マイコン制御部</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Noto+Serif+JP&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-<!--ヘッダー-->
+<body style="background: gray">
+<!--ヘッダ-->
 <div id="header"></div>
-<!--スライド-->
-<div class="container">
-    <div class="slider-items">
-        <div><img src="/images/Bannerデスマ.png" onclick="window.location.href='/Hackson'"></div>
-        <div><img src="/images/seminar_2019.png" onclick="window.location.href='/Hackson'"></div>
-        <!--<div>で囲って要素を追加-->
+<!--スライダ-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12" style="background: linear-gradient(darkorange,orange);">
+            <div class="slider-items">
+                <div>
+                    <img src="/images/slideShow/hackson.PNG" onclick="window.location.href='/Hackson'">
+                    <p>君の一票で全てが決まる!</p>
+                </div>
+                <div>
+                    <img src="/images/slideShow/workshop.PNG" onclick="window.location.href='/Workshop'">
+                    <p>一般向けワークショップ開催します</p>
+                </div>
+                <div>
+                    <img src="/images/slideShow/twitter.png"
+                         onclick="window.location.href='https://twitter.com/toufu_micom'">
+                    <p>ワークショップの受付状況など随時配信！</p>
+                </div>
+                <!--<div>で囲って要素を追加-->
+            </div>
+        </div>
     </div>
-    <!--メインコンテンツ-->
-    <h2>Welcome to MCCC!</h2>
-    マイコン制御部文化祭2019の特設サイトへようこそ<br>
-    <h2>更新情報</h2>
-    <ul>
-        <li>サイトを開設しました！</li>
-    </ul>
+    <div class="row" style="background: linear-gradient(skyblue,deepskyblue);">
+        <div class="col-12" style="margin: 10px auto 10px">
+            <!--メインコンテンツ-->
+            <h1>Welcome to MCCC</h1>
+            <p>マイコン制御部文化祭2019の特設サイトへようこそ</p>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <h2>Updates</h2>
+            <ul>
+                <li>サイトを開設しました！(2019-09-09)</li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+            <h2>News</h2>
+            <ul>
+                <li>スライドついた(2019-09-09)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" style="background: gray">
+        <div class="col-12 copyright">
+            Copyright© 2019
+            Tokyo Tech High School of Science and Technology -
+            MicroControllerControlClub. All Rights Reserved.
+        </div>
+    </div>
 </div>
 </body>
 

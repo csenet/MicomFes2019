@@ -7,6 +7,10 @@
     background-color: #f5f5f5;
 }
 
+body {
+<!-- 明朝体 font-family: 'Noto Serif JP', serif;
+-->
+}
 body > .container {
     padding: 60px 15px 0;
 }
@@ -21,13 +25,26 @@ body > .container {
 }
 
 .slider-items {
-    max-height: 600px;
-    margin: 0 auto 50px;
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto 30px;
     padding: 0;
-    width: auto;
-    background: yellow;
+    height: auto;
 }
-
 .slider-items img {
     width: 100%;
+}
+
+.slider-items p {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 5px;
+    font-size: x-large;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.copyright {
+    color: ghostwhite;
+    text-align: center;
+    margin: 30px auto 30px;
 }
