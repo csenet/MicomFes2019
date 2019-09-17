@@ -1097,12 +1097,12 @@
     return le;
   }
 
-  // return a byte string from rgb values
+    // return a byte string from rgb values
   function lecCRgb(r, g, b) {
     return String.fromCharCode(b) + String.fromCharCode(g) + String.fromCharCode(r);
   }
 
-  // return a byte string from a hex string color
+    // return a byte string from a hex string color
   function lecCHexColor(hex) {
     var g, r,
       v = parseInt("0x" + hex.substr(1), 16),
@@ -1113,7 +1113,7 @@
     return (lecCRgb(r, g, b));
   }
 
-  function hexToRGB(hex) {
+    function hexToRGB(hex) {
     var g, r,
       v = parseInt("0x" + hex.substr(1), 16),
       b = v & 0xFF;
@@ -1123,12 +1123,12 @@
     return ({r: r, g: g, b: b});
   }
 
-  // test if a string is a hexa string color (like #FF0000)
+    // test if a string is a hexa string color (like #FF0000)
   function isHexColor(value) {
     return value.match(/#[0-91-F]/gi);
   }
 
-  // encode data in base64
+    // encode data in base64
   function base64Encode(value) {
     var c1, c2, c3, b1, b2, b3, b4,
       r = '',
@@ -1152,7 +1152,7 @@
     return r;
   }
 
-  // convert a bit string to an array of array of bit char
+    // convert a bit string to an array of array of bit char
   function bitStringTo2DArray(digit) {
     var i,
       d = [];
@@ -1163,22 +1163,13 @@
     return d;
   }
 
-  // clear jQuery Target
+    // clear jQuery Target
   function resize($container, w) {
     $container
       .css("padding", "0")
       .css("overflow", "auto")
       .css("width", w + "px")
       .html("");
-    return $container;
-  }
-
-  // apply antialiasing for CSS rendering only
-  function antialiasing($container){
-    $container
-      .css("display", "flex")
-      .css("flex-flow", "row wrap")
-      .css("justify-content", "space-around");
     return $container;
   }
 
@@ -1250,8 +1241,8 @@
       lines = digit.length,
       columns = digit[0].length,
       content = "",
-        bar0 = "<div css=\"float: left; font-size: 0; background-color: " + settings.bgColor + "; height: " + mh + "px; width: &Wpx\"></div>",
-        bar1 = "<div css=\"float: left; font-size: 0; width:0; border-left: &Wpx solid " + settings.color + "; height: " + mh + "px;\"></div>";
+        bar0 = "<div style=\"float: left; font-size: 0; background-color: " + settings.bgColor + "; height: " + mh + "px; width: &Wpx\"></div>",
+        bar1 = "<div style=\"float: left; font-size: 0; width:0; border-left: &Wpx solid " + settings.color + "; height: " + mh + "px;\"></div>";
     for (y = 0; y < lines; y++) {
       len = 0;
       current = digit[y][0];
@@ -1269,9 +1260,8 @@
       }
     }
     if (settings.showHRI) {
-        content += "<div css=\"clear:both; width: 100%; background-color: " + settings.bgColor + "; color: " + settings.color + "; text-align: center; font-size: " + settings.fontSize + "px; margin-top: " + settings.marginHRI + "px;\">" + hri + "</div>";
+        content += "<div style=\"clear:both; width: 100%; background-color: " + settings.bgColor + "; color: " + settings.color + "; text-align: center; font-size: " + settings.fontSize + "px; margin-top: " + settings.marginHRI + "px;\">" + hri + "</div>";
     }
-    antialiasing($container);
     resize($container, mw * columns).html(content);
   }
 
@@ -1289,7 +1279,7 @@
     }
 
     // svg header
-    svg = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + width + '" height="' + height + '" shape-rendering="crispEdges">';
+      svg = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="' + width + '" height="' + height + '">';
 
     // background
     svg += '<rect width="' +  width + '" height="' + height + '" x="0" y="0" fill="' + settings.bgColor + '" />';
@@ -1317,7 +1307,7 @@
 
     if (settings.showHRI) {
       svg += '<g transform="translate(' + Math.floor(width / 2) + ' 0)">';
-        svg += '<text y="' + (height - Math.floor(fontSize / 2)) + '" text-anchor="middle" css="font-family: Arial; font-size: ' + fontSize + 'px;" fill="' + settings.color + '">' + hri + '</text>';
+        svg += '<text y="' + (height - Math.floor(fontSize / 2)) + '" text-anchor="middle" style="font-family: Arial; font-size: ' + fontSize + 'px;" fill="' + settings.color + '">' + hri + '</text>';
       svg += '</g>';
     }
     // svg footer
@@ -1386,39 +1376,39 @@
     digitToBmpRenderer($container, settings, bitStringTo2DArray(digit), hri, w, h);
   };
 
-  // bmp 2D barcode renderer
+    // bmp 2D barcode renderer
   renderer.bmp2 = function ($container, settings, digit, hri) {
     var s = intval(settings.moduleSize);
     digitToBmpRenderer($container, settings, digit, hri, s, s);
   };
 
-  // css 1D barcode renderer
+    // css 1D barcode renderer
   renderer.css = function ($container, settings, digit, hri) {
     var w = intval(settings.barWidth),
       h = intval(settings.barHeight);
     digitToCssRenderer($container, settings, bitStringTo2DArray(digit), hri, w, h);
   };
 
-  // css 2D barcode renderer
+    // css 2D barcode renderer
   renderer.css2 = function ($container, settings, digit, hri) {
     var s = intval(settings.moduleSize);
     digitToCssRenderer($container, settings, digit, hri, s, s);
   };
 
-  // svg 1D barcode renderer
+    // svg 1D barcode renderer
   renderer.svg = function ($container, settings, digit, hri) {
     var w = intval(settings.barWidth),
       h = intval(settings.barHeight);
     digitToSvgRenderer($container, settings, bitStringTo2DArray(digit), hri, w, h);
   };
 
-  // svg 2D barcode renderer
+    // svg 2D barcode renderer
   renderer.svg2 = function ($container, settings, digit, hri) {
     var s = intval(settings.moduleSize);
     digitToSvgRenderer($container, settings, digit, hri, s, s);
   };
 
-  // canvas 1D barcode renderer
+    // canvas 1D barcode renderer
   renderer.canvas = function ($container, settings, digit, hri) {
     var w  = intval(settings.barWidth),
       h = intval(settings.barHeight),
@@ -1427,7 +1417,7 @@
     digitToCanvasRenderer($container, settings, bitStringTo2DArray(digit), hri, x, y, w, h);
   };
 
-  // canvas 2D barcode renderer
+    // canvas 2D barcode renderer
   renderer.canvas2 = function ($container, settings, digit, hri) {
     var s = intval(settings.moduleSize),
       x = intval(settings.posX),
