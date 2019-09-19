@@ -17,15 +17,15 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="http://localhost:8888/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Noto+Serif+JP&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="/js/slide.js"></script>
+    <script type="text/javascript" src="http://localhost:8888/js/slide.js"></script>
 </head>
 
-<body style="background: gray">
+<body>
 <!--ヘッダ-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
