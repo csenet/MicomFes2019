@@ -22,8 +22,8 @@ include("./include/header.php");
         <div class="col-12">
             <div class="card-deck" style="margin: 30px auto 30px;">
                 <?php
-                /*更新履歴*/
-                include("./include/updates.php");
+                /*ニュース*/
+                include("./include/news.php");
                 ?>
                 <div class="card">
                     <div class="card-body">

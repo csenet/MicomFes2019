@@ -6,7 +6,7 @@
     </div>
     <div>
         <img src="/images/slideShow/workshop.PNG" onclick="window.location.href='/Workshop'">
-        <p class="message">一般向けワークショップ開催します</p>
+        <p class="message">一般向けワークショップ開催</p>
     </div>
     <div>
         <img src="/images/slideShow/twitter.png"
