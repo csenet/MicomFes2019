@@ -21,7 +21,7 @@ include("../include/header.php");
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-6 col-sm-12">
             <h2>タイムスケジュール</h2>
             <table class="table table-striped" style="text-align: center;">
                 <thead class="thead-light">
