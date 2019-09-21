@@ -49,6 +49,38 @@ include("../include/header.php");
                 </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <h2>受付状況</h2>
+            <table class="table table-striped" style="text-align: center;">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Day1(10/12[Sun])</th>
+                    <th scope="col">Day2(10/13[Mon])</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>◯</td>
+                    <td>◯</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>◯</td>
+                    <td>◯</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>◯</td>
+                    <td>-</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12">
+            <h1>発券はコチラから</h1>
             <button type="button" id="print_button" class="btn btn-primary">発券</button>
             <script>
                 $('#print_button').on('click', function (e) {
