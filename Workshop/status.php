@@ -12,7 +12,7 @@
     header('Content-Type: text/html; charset=UTF-8');
     $dsn = 'mysql:host=localhost;dbname=workshop;charset=utf8';
     $user = 'root';
-    $password = '';
+    $password = 'Sparc3sparc';
     $timeData = [
         ["10:00~11:00", "10:00~11:00"],
         ["12:00~13:00", "13:00~14:00"],
@@ -26,7 +26,7 @@
         $status = "INDOOR";
         $mailAdress = "kouichi.hirachi@gmail.com";
 
-        $pdo = new PDO ($dsn, $user);
+        $pdo = new PDO ($dsn, $user, $password);
         $stmt = $pdo->query("SELECT * FROM entry");
         /*
         $stmt = $pdo->prepare("INSERT INTO entry (
