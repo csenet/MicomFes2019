@@ -98,6 +98,7 @@ if (isset($_POST["date"])) {
                 </tr>
                 </tbody>
             </table>
+            <p><a href="check.php">戻る</a></p>
         </div>
     </div>
     <?php
@@ -193,6 +194,7 @@ if (isset($_POST["date"])) {
                     });
                 });
             </script>
+            <p><a href="check.php">戻る</a></p>
         </div>
     </div>
     <?php
