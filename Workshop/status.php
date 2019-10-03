@@ -19,29 +19,9 @@
         ["14:00~15:00", ""]
     ];
     try {
-        /*テストデータ*/
-        $id = 10;
-        $time = 11;
-        $exp = "PRO";
-        $status = "INDOOR";
-        $mailAdress = "kouichi.hirachi@gmail.com";
 
         $pdo = new PDO ($dsn, $user, $password);
         $stmt = $pdo->query("SELECT * FROM entry");
-        /*
-        $stmt = $pdo->prepare("INSERT INTO entry (
-                                    id,time,exp,status,mailAdress
-                                ) VALUES (
-                                    :id,:time,:exp,:status,:mailAdress
-                                )");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':time', $time, PDO::PARAM_INT);
-        $stmt->bindParam(':exp', $exp, PDO::PARAM_STR);
-        $stmt->bindParam(':status', $status, PDO::PARAM_STR);
-        $stmt->bindParam(':mailAdress', $mailAdress, PDO::PARAM_STR);
-
-        $stmt->execute();
-        */
 
         $status = [
             [0, 0],
@@ -49,8 +29,20 @@
             [0, 0]
         ];
         foreach ($stmt as $value) {
-            $num = $value[time];
-            $status[$num % 10 - 1][floor($num / 10) - 1]++;
+            $date = $value[date];
+            $time = $value[time];
+            $indexA = 0;
+            $indexB = 0;
+            switch ($date) {
+                case "10/12[Sun]":
+                    $indexB = 0;
+                    break;
+                case "10/13[Mon]":
+                    $indexB = 1;
+                    break;
+            }
+            $indexB = intval(substr($time, 1, 1)) - 1;
+            $status[$indexA][$indexB]++;
         }
         $index = 1;
         foreach ($status as $value) {

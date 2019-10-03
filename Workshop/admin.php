@@ -11,6 +11,7 @@ include("../include/header.php");
                 <thead class="thead-light">
                 <tr>
                     <th scope="col">id</th>
+                    <th scope="col">date</th>
                     <th scope="col">time</th>
                     <th scope="col">exp</th>
                     <th scope="col">status</th>
@@ -22,9 +23,9 @@ include("../include/header.php");
                 header('Content-Type: text/html; charset=UTF-8');
                 $dsn = 'mysql:host=localhost;dbname=workshop;charset=utf8';
                 $user = 'root';
-                $password = '';
+                $password = 'Sparc3sparc';
                 try {
-                    $pdo = new PDO ($dsn, $user);
+                    $pdo = new PDO ($dsn, $user, $password);
                     $stmt = $pdo->query("SELECT * FROM entry");
                     /*
                     $stmt = $pdo->prepare("INSERT INTO entry (
@@ -43,6 +44,7 @@ include("../include/header.php");
                     foreach ($stmt as $value) {
                         echo "<tr>";
                         echo '<th scope="col">' . $value[id] . '</th>';
+                        echo "<td>$value[date]</td>";
                         echo "<td>$value[time]</td>";
                         echo "<td>$value[exp]</td>";
                         echo "<td>$value[status]</td>";
