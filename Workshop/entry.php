@@ -31,7 +31,7 @@ if (isset($_POST["date"])) {
         文化祭ワークショップへ予約有難うございます。\n
         予約番号:" . $id . "\n
         10分前には会場に来てください。";
-        $from = "【マイコン制御部】 ";
+        $from = "noreplay";
         $from_mail = "noreply@fes-micom.ml";
         $from_name = "【マイコン制御部】";
         $header = '';
