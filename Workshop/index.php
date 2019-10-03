@@ -67,6 +67,7 @@ include("../include/header.php");
             <p>
                 また，当日の変更・取消については直接マイコン制御部の受付までお越しください。
             </p>
+            <a href="check.php">戻る</a>
         </div>
     </div>
 </div>

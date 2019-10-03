@@ -48,7 +48,6 @@ if (isset($_POST["date"])) {
         $header .= "X-Sender: " . $from_mail . " \r\n";
         $header .= "X-Priority: 3 \r\n";
         if (mb_send_mail($to, $title, $content, $header)) {
-            echo "メールを送信しました";
         } else {
             echo "メールの送信に失敗しました";
         };
@@ -63,7 +62,8 @@ if (isset($_POST["date"])) {
         <p>
             予約が完了しました。<br>
             当日は予約番号を提示してください。<br>
-            また，予約番号は変更・取り消し時に必要となるので必ずメモをしてください。
+            また，予約番号は変更・取り消し時に必要となるので必ずメモをしてください。<br>
+            なお，迷惑メールになっている可能性が高いのでメールが届かない場合は確認してください。
         </p>
         <div class="col-lg-6 col-md-12">
             <table class="table table-striped">
