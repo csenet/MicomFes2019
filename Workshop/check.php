@@ -85,7 +85,7 @@ if (isset($_POST["number"])) {
                 <button type="submit" class="btn btn-primary btn-block btn-lg btn-info col-lg-5 mx-auto"
                         onClick='window.open("check.php?id=<?php echo $_POST["number"]; ?>&task=cancel","_self");'>取消
                 </button>
-                <p><a href="check.php">戻る</a></p>
+                <p><a href="index.php">戻る</a></p>
             </div>
         </div>
         <?php
@@ -121,9 +121,8 @@ if (isset($_POST["number"])) {
                             照会
                         </button>
                     </div>
-                    <br>
-                    <p><a href="check.php">戻る</a></p>
                 </form>
+                <p><a href="index.php">戻る</a></p>
             </div>
         </div>
     </div>
