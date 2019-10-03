@@ -170,6 +170,7 @@ if (isset($_POST["date"])) {
                     <br>
                     <img src="/images/perfect.png">
                 </div>
+                <p><a href="check.php">戻る</a></p>
             </div>
             <script>
                 $(function () {
@@ -194,7 +195,6 @@ if (isset($_POST["date"])) {
                     });
                 });
             </script>
-            <p><a href="check.php">戻る</a></p>
         </div>
     </div>
     <?php
