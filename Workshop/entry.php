@@ -30,6 +30,10 @@ if (isset($_POST["date"])) {
         $content = "
         文化祭ワークショップへ予約有難うございます。\n
         予約番号:" . $id . "\n
+        日付:" . $_POST["date"] . "\n
+        時間:" . $_POST["time"] . "\n
+        経験:" . $_POST["experience"] . "\n
+        種別:" . $_POST["time"] . "\n
         10分前には会場に来てください。";
         $from = "noreplay";
         $from_mail = "noreply@fes-micom.ml";
