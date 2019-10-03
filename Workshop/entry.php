@@ -31,7 +31,19 @@ if (isset($_POST["date"])) {
         文化祭ワークショップへ予約有難うございます。\n
         予約番号:" . $id . "\n
         10分前には会場に来てください。";
-        if (mb_send_mail($to, $title, $content)) {
+        $from = "【マイコン制御部】 ";
+        $from_mail = "noreply@fes-micom.ml";
+        $from_name = "【マイコン制御部】";
+        $header = '';
+        $header .= "Content-Type: text/plain \r\n";
+        $header .= "Return-Path: " . $from_mail . " \r\n";
+        $header .= "From: " . $from . " \r\n";
+        $header .= "Sender: " . $from . " \r\n";
+        $header .= "Reply-To: " . $from_mail . " \r\n";
+        $header .= "Organization: " . $from_name . " \r\n";
+        $header .= "X-Sender: " . $from_mail . " \r\n";
+        $header .= "X-Priority: 3 \r\n";
+        if (mb_send_mail($to, $title, $content, $header)) {
             echo "メールを送信しました";
         } else {
             echo "メールの送信に失敗しました";
