@@ -121,6 +121,7 @@ if (isset($_POST["number"])) {
                             照会
                         </button>
                     </div>
+                    <br>
                     <p><a href="check.php">戻る</a></p>
                 </form>
             </div>
