@@ -173,7 +173,7 @@ if (isset($_POST["date"])) {
                 <p><a href="index.php">戻る</a></p>
             </div>
             <script>
-                $(function () {
+                $(document).ready(function () {
                     $("#date").change(function () {
                         switch ($("#date").val()) {
                             case "10/12[Sun]":
